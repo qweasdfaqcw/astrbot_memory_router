@@ -1,0 +1,2 @@
+# 运行时没有第三方依赖：SQLite/FTS5、asyncio、标准库即可。
+# AstrBot 已提供 astrbot 包；不要把 astrbot 写进这里，避免覆盖宿主环境。

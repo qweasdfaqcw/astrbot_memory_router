@@ -1,0 +1,8 @@
+name: astrbot_memory_router
+display_name: 记忆路由
+desc: 短期上下文 + 长期外部记忆：自动抽取、按需召回、分层遗忘、多租户隔离与可审计注入。
+short_desc: 让 AstrBot 拥有可治理的长期记忆。
+version: 0.1.0
+author: astrbot_memory_router contributors
+repo: https://github.com/qweasdfaqcw/astrbot_memory_router
+astrbot_version: ">=4.9.2,<5"
