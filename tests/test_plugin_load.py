@@ -5,18 +5,18 @@ from __future__ import annotations
 import asyncio
 import importlib
 import inspect
-import logging
 import sys
 import types
 from pathlib import Path
 
+from tests.astrbot_stub import NullLogger
+
 
 def _install_astrbot_stubs(tmp_path: Path) -> None:
-    if "astrbot" in sys.modules:
-        return
     astrbot = types.ModuleType("astrbot")
+    astrbot.__path__ = []
     api = types.ModuleType("astrbot.api")
-    api.logger = logging.getLogger("test.astrbot")
+    api.logger = NullLogger()
     event = types.ModuleType("astrbot.api.event")
     star = types.ModuleType("astrbot.api.star")
 

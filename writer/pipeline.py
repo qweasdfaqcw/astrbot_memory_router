@@ -3,9 +3,10 @@
 from __future__ import annotations
 
 import hashlib
-import logging
 from dataclasses import dataclass, field
 from typing import Any, Iterable, Mapping
+
+from astrbot.api import logger
 
 from config.settings import MemorySettings
 from store.models import (
@@ -29,8 +30,6 @@ from writer.sanitizer import (
     mask_sensitive,
 )
 from writer.tagger import derive_tags, tag_strings
-
-logger = logging.getLogger(__name__)
 
 
 @dataclass(slots=True)

@@ -3,10 +3,11 @@
 from __future__ import annotations
 
 import asyncio
-import logging
 import time
 from dataclasses import dataclass, field
 from typing import Any, Iterable, Mapping
+
+from astrbot.api import logger
 
 from config.settings import MemorySettings
 from gate.gate import Gate, GateDecision
@@ -21,8 +22,6 @@ from store.sqlite_store import SQLiteStore
 from utils.ids import new_trace_id
 from utils.time_utils import now_iso
 from writer.sanitizer import mask_sensitive
-
-logger = logging.getLogger(__name__)
 
 
 @dataclass(slots=True)
